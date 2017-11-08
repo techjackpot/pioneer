@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tests for jquery-circle-progress</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/circle-progress.js"></script>
+    
+</head>
+<body>
+    
+    
+    <div class="circle"></div>
+    <script>
+        $('.circle').circleProgress({
+            value: 0.75,
+            animation: false,
+            fill: { image: "color-gradient-6-1440x9003.png" }
+        });
+    </script>
+</body>
+</html>

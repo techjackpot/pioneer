@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>DEV SITE</title>
+
+		<link rel="stylesheet" type="text/css" href="/css/front.css" />
+		<link rel="stylesheet" href="/css/intltelinput.css">
+	<!-- SET: SCRIPTS -->
+	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"></script>-->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+	
+	<script src="/js/phonepicker.js"></script>
+		<script src="/js/front.min.js?1468248575"></script>
+		<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script type="text/javascript">
+		$(document).ready(function() {
+        if("-14400".length==0){
+				var visitortime = new Date();
+				var visitortimezoneoffset = -visitortime.getTimezoneOffset()*60;
+				var dataString = 'time='+visitortimezoneoffset;
+				$.ajax({
+					type: "POST",
+					url: "/sec_ajax/settimezone",
+					data: dataString,
+					success: function(){
+						location.reload();
+					}
+				});
+			}
+		});
+	</script>
+
+<!-- END: SCRIPTS -->
+
+</head>
+
+<body id="home">
+
+    <!-- wrapper starts -->
+    <div class="wrapper">
+        
+        <!-- Header Starts -->
+         
+        <div class="header">
+            <div class="margins">
+                <div class="padding">
+                    <a href="/">
+                        <img src="/images/logo.png" border="0" class="mainlogo" />
+                    </a>
+                    <img src="/images/quickship-truck.png" class="qstruckimg" />
+                </div>
+            </div>
+        </div> 
+        <!-- Header ends -->
+            
+        <!-- maincontent Starts -->
+		<div class="main">
+            <div class="margins">
+                <div class="padding">
+                    <div class="containerqs">
+                        <div class="largebanner banner1">&nbsp;</div>
+                        <h1>Welcome To The New Pioneer Quick Ship Program.</h1>
+                        <p>Please log in using the secure form below to access your account. If you need access or have any questions please <a href="http://pioneerindustries.com/contact-us" target="_blank">contact us</a>.</p>
+                        <?php include("/login.php") ?>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <!-- maincontent ends -->
+				<!-- footer starts -->
+		<div class="footer">
+		</div>
+	</div>
+	<!-- wrapper ends -->
+</body>
+</html>

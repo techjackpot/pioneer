@@ -1,0 +1,31 @@
+#ALLOW USER BY IP
+#<Limit GET POST>
+# order deny,allow
+# deny from all
+# allow from 173.63.120.71 #Ken
+# allow from 108.53.190.226 #pioneer
+# allow from 104.140.240.3 #Jason Brown WORK
+# allow from 209.209.234.102 #Jason Brown HOME
+#</Limit>
+
+#<IfModule mod_suphp.c>
+#AddType application/x-httpd-php5-4 .php .phtml .php5
+#<Files *.php>
+#        ForceType application/x-httpd-php5-4
+#</Files>
+#</IfModule>
+
+Options +FollowSymLinks -MultiViews
+
+RewriteEngine On
+RewriteBase /
+
+#RewriteCond %{HTTP_HOST} !^www\.
+#RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteRule ^front/uploads/(.*) /var/uploads/$1 [QSA,L]
+
+RewriteRule ^index\.php$ - [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ /index.php [L]

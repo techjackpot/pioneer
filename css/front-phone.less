@@ -1,0 +1,106 @@
+@media (max-width: 1040px) { // Tablet sized
+
+}
+@media (max-width: 740px) { // Phone sized
+	#header {
+		position: fixed;
+		top: 0;
+		height: auto;
+		.nav {
+			display: none;
+		}
+		&:before { display: none; }
+		padding: 5px 10px 0px 10px;
+		h1 {
+			float: none;
+			margin: 0;
+			padding: 0 0 5px 0;
+			a {
+				width: 252px;
+				height: 38px;
+				background: url(../img/logo-mobile.png) no-repeat top left;
+			}
+		}
+		.expand-nav {
+			display: block;
+			position: absolute;
+			cursor: pointer;
+			top: 4px;
+			right: 4px;
+			width: 40px;
+			height: 40px;
+			background: url(../img/nav-expand.png) no-repeat center;
+		}
+		
+		.nav {
+			float: none;
+			margin-bottom: 10px;
+			padding: 0;
+			border-top: 1px solid #fff;
+			li {
+				float: none;
+				height: auto;
+				padding: 0;
+				border-left: 0;
+				border-bottom: 1px solid #fff;
+				a {
+					border-bottom: none;
+					text-align: right;
+					font-weight: bold;
+					padding: 8px 4px;
+					line-height: 20px;
+				}
+			}
+		}
+		#become-a-member-link { display: block; }
+	}
+	
+	#footer {
+		position: static;
+		bottom: auto;
+		left: auto;
+		right: auto;
+		ul { padding: 10px; }
+	}
+	#login_tab { display: none; }
+
+	#content {
+		margin-top: 48px;
+	}
+
+	#sidebar {
+		background: none;
+		float: none;
+		width: auto;
+		padding: 0;
+		ul.links {
+			width: auto;
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+	}
+
+	#main {
+		background: none;
+		margin-left: 0;
+		padding: 0 20px;
+	}
+	
+	h2 {
+		font-size: 24px;
+		margin: 20px 0 20px 0;
+	}
+	
+	h3 {
+		font-size: 18px;
+		margin: 15px 0 15px 0;
+	}
+	
+	
+	.event-list {
+		.event {
+			.description { display: none; }
+		}
+	}
+
+}

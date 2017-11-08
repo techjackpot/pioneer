@@ -1,0 +1,218 @@
+/*
+Copyright (c) 2003-2013, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md or http://ckeditor.com/license
+*/
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { margin:0; padding:0;outline:none;}
+
+body
+{
+	/* Font */
+	color: #b1b1b1;
+	font-family: "Arial", Verdana, Tahoma;
+	font-size: 12px;
+
+	/* Remove the background color to make it transparent */
+	background-color: #fff;
+
+	margin: 20px;
+}
+
+p	{ 
+	display: block;
+	color: #00538A;
+	font-size: 15px;
+	font-weight: 300;
+	font-family: 'Source Sans Pro', sans-serif;
+	line-height: 22px;
+	padding: 0 0 15px 0;
+}
+
+.cke_editable
+{
+	font-size: 13px;
+	line-height: 1.6em;
+}
+
+blockquote
+{
+	font-style: italic;
+	font-family: Georgia, Times, "Times New Roman", serif;
+	padding: 2px 0;
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 0;
+}
+
+.cke_contents_ltr blockquote
+{
+	padding-left: 20px;
+	padding-right: 8px;
+	border-left-width: 5px;
+}
+
+.cke_contents_rtl blockquote
+{
+	padding-left: 8px;
+	padding-right: 20px;
+	border-right-width: 5px;
+}
+
+a							{color:#0093C9; text-decoration: underline; outline:0 none;}
+a:hover						{color:#0093C9;  text-decoration: underline;}
+a:active						{color:#0093C9;  text-decoration: underline;}
+
+ol,ul,dl
+{
+	/* IE7: reset rtl list margin. (#7334) */
+	*margin-right: 0px;
+	/* preserved spaces for list items with text direction other than the list. (#6249,#8049)*/
+	padding: 0 40px;
+}
+
+.subheading {
+  display: block;
+  color: #00538A;
+  font-size: 17px;
+  font-weight: 400;
+  font-style: italic;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 0 0 18px 0;
+}
+
+ul {
+	list-style:disc;
+	margin: 0px 0px 15px 20px;
+}
+
+ul li {
+	color: #00538A;
+	font-size: 15px;
+	font-weight: 300;
+	font-family: 'Source Sans Pro', sans-serif;
+	line-height: 22px;
+}
+
+h1,h2,h3,h4,h5,h6 {	font-size:100%;	font-weight:bold;}
+
+h1	{font-size:24px;}
+h2	{font-size:22px;}
+h3	{font-size:18px;}
+h4	{font-size:16px;}
+h5	{font-size:14px;}
+h6	{font-size:12px;}
+
+h2	{ display:block; color:#00538A; font-size:41px; font-weight:800; font-family: 'Raleway', sans-serif; text-transform: uppercase; letter-spacing: 2px; word-spacing: 3px; padding: 0 0 16px 0;}
+h4	{ display:block; color:#0093C9; font-size:22px; font-weight:500; font-family: 'Raleway', sans-serif;padding: 0 0 13px 0;}
+
+hr
+{
+	border: 0px;
+	border-top: 1px solid #ccc;
+}
+
+img.right
+{
+	border: 1px solid #ccc;
+	float: right;
+	margin-left: 15px;
+	padding: 5px;
+}
+
+img.left
+{
+	border: 1px solid #ccc;
+	float: left;
+	margin-right: 15px;
+	padding: 5px;
+}
+
+pre
+{
+	white-space: pre-wrap; /* CSS 2.1 */
+	word-wrap: break-word; /* IE7 */
+}
+
+.marker
+{
+	background-color: Yellow;
+}
+
+span[lang]
+{
+   font-style: italic;
+}
+
+.bciu ul li a.gov {
+  	backface-visibility: hidden;
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-color: rgba(0, 0, 0, 0);
+	background-image: url(http://bciu.idzineit.com/images/bciu-gov.png);
+	background-origin: padding-box;
+	background-size: auto;
+	color: rgb(0, 147, 201);
+	cursor: auto;
+	display: block;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	height: 174px;
+	line-height: 22px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: disc;
+	outline-color: rgb(0, 147, 201);
+	outline-style: none;
+	outline-width: 0px;
+	text-align: left;
+	text-decoration: none;
+	transition-delay: 0s;
+	transition-duration: 0.5s;
+	transition-property: all;
+	transition-timing-function: ease;
+	width: 174px;
+}
+
+.bciu ul {
+	display: inline-block;
+	list-style:none;
+}
+
+.bciu ul li a:hover {
+	background: url(/images/busi-hover.png) no-repeat;
+	-webkit-transition: 1.5s all ease;
+	-transition: 1.5s all ease;
+	transition: 1.5s all ease;
+}
+
+.bciu ul li a.bus {
+  	backface-visibility: hidden;
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-color: rgba(0, 0, 0, 0);
+	background-image: -webkit-cross-fade(url(http://bciu.idzineit.com/images/bciu-bus.png), url(http://bciu.idzineit.com/images/busi-hover.png), 0.987922809706404);
+	background-origin: padding-box;
+	background-size: auto;
+	color: rgb(0, 147, 201);
+	cursor: auto;
+	display: block;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	height: 174px;
+	line-height: 22px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: disc;
+	outline-color: rgb(0, 147, 201);
+	outline-style: none;
+	outline-width: 0px;
+	text-align: left;
+	text-decoration: none;
+	transition-delay: 0s;
+	transition-duration: 1.5s;
+	transition-property: all;
+	transition-timing-function: ease;
+	width: 174px;
+}
