@@ -167,6 +167,9 @@ jQuery(function($) {
 			}
 		});
 		
+		$('.myaccount a.icon-toggle').click(function(){
+			$('.myaccount #search').toggle(300);
+		})
 	});
 	
 	function scaleVideoContainer() {
