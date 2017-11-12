@@ -21,6 +21,7 @@ break;
 case 'vendors':
 case 'projects':
 case 'frameproducts':
+case 'files':
 case 'pages':
 	switch($path[2]):
 	case 'add':

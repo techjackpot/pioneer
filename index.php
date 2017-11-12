@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 define('INDEX', true);
 
 require_once 'common.php';
@@ -76,6 +78,9 @@ case 'projects':
 case 'about-pioneer':
 case 'contact-us':
 	require 'front/'.$path[0].'.php';
+break;
+case 'search':
+	require 'front/search.php';
 break;
 case '':
 	require 'front/home.php';

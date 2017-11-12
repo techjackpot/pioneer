@@ -19,8 +19,7 @@ class TableHelper {
 			if (array_key_exists($key, $_GET)) {
 				if ($key === 'search') {
 					$filters['search'] = unslash($_GET['search']);
-				}
-				else {
+				} else {
 					
 					$getarr = @explode(",", $_GET[$key]);			
 					if (is_array($getarr))

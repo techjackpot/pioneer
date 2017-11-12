@@ -1,4 +1,6 @@
 <?php
+// error_reporting(E_ALL);
+// ini_set('display_errors', 1);
 if (!defined('INDEX')) { require dirname(__FILE__).'/index.php'; exit; }
 
 function display_title($title, $tag = 'h2', $class = 'page-title') {
@@ -16,9 +18,6 @@ function create_header($title = null) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<div id="loading">
-	<img id="loading-image" src="/images/ajax-loader.gif" alt="Loading..."/>
-</div>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title><?=SITE_TITLE?> Admin<?= blank($title) ? "" : " &mdash; $title" ?></title>
@@ -112,6 +111,9 @@ function create_header($title = null) {
 </head>
 
 <body>
+	<div id="loading">
+		<img id="loading-image" src="/images/ajax-loader.gif" alt="Loading..."/>
+	</div>
 	<div class="navbar navbar-static-top navbar-inverse">
 		<div class="navbar-inner">
 			<div class="container-fluid">
@@ -128,6 +130,7 @@ function create_header($title = null) {
 					<?php if (has_permission('frameoption_view')): ?><li <?=active_if($path[1]==='frameoptions')?>><a href="<?=BASE_PATH?>admin/frameoptions">Frame Options</a></li><?php endif ?>
 					<?php if (has_permission('order_view')): ?><li <?=active_if($path[1]==='orders')?>><a href="<?=BASE_PATH?>admin/orders">Orders</a></li><?php endif ?>
 					<?php if (has_permission('pages_view')): ?><li <?=active_if($path[1]==='pages')?>><a href="<?=BASE_PATH?>admin/pages">CMS</a></li><?php endif ?>
+					<?php if (has_permission('files_view')): ?><li <?=active_if($path[1]==='files')?>><a href="<?=BASE_PATH?>admin/files">Files</a></li><?php endif ?>
 					<?php if (has_permission('projects_view')): ?><li <?=active_if($path[1]==='projects')?>><a href="<?=BASE_PATH?>admin/projects">Projects</a></li><?php endif ?>
 					<?php if (has_permission('vendors_view')): ?><li <?=active_if($path[1]==='vendors')?>><a href="<?=BASE_PATH?>admin/vendors">Vendors</a></li><?php endif ?>
 					<?php if (has_permission('settings')): ?><li <?=active_if($path[1]==='settings')?>><a href="<?=BASE_PATH?>admin/settings">Settings</a></li><?php endif ?>

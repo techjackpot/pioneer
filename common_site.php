@@ -1,7 +1,7 @@
 <?php
 if (!defined('INDEX')) { require dirname(__FILE__).'/index.php'; exit; }
 
-foreach(array('user', 'organization', 'page', 'notification', 'frameproduct', 'frameoption', 'order', 'project', 'vendor') as $m) { require dirname(__FILE__)."/{$m}s/{$m}_model.php"; }
+foreach(array('user', 'organization', 'page', 'notification', 'frameproduct', 'frameoption', 'order', 'project', 'vendor', 'file') as $m) { require dirname(__FILE__)."/{$m}s/{$m}_model.php"; }
 
 $__settings = array(
 	'timezone' => array('type' => 'text', 'default' => 'America/New_York', 'display' => 'General'),
@@ -34,6 +34,7 @@ function admin_url($model = null, $id = null, $id2 = null, $id3 = null) {
 		case 'frameoptions':
 	    case 'frameproducts':
 		case 'pages':
+		case 'files':
 		case 'organizations':
 			$url .= $model;
 		break;

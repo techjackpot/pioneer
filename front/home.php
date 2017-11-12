@@ -6,7 +6,7 @@ if (!defined('INDEX')) { require dirname(__FILE__).'/../index.php'; exit; }
     <div class="video-container">
 		<div class="topright">
 			<div class="myaccount">
-            <form method="post" name="search-form" id="search-form" action="/search">
+            <form method="get" name="search-form" id="search-form" action="search">
                 <a class="icon-toggle" href="#"></a>
                 <input style="display: none;" type="text" name="search" id="search" />
                 <a class="search-btn" href="javascript: document.forms['search-form'].submit();">Search</a>
